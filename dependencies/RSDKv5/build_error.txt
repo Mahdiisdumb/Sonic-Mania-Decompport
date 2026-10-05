@@ -1,1 +1,54 @@
-[1/1] Linking CXX executable RSDKv5U.js
+[1/63] Building C object CMakeFiles/libogg.dir/dependencies/all/libogg/src/bitwise.c.o
+[2/63] Building C object CMakeFiles/libogg.dir/dependencies/all/libogg/src/framing.c.o
+[3/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/apiwrapper.c.o
+[4/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/bitpack.c.o
+[5/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/analyze.c.o
+[6/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/decapiwrapper.c.o
+[7/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/decinfo.c.o
+[8/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/decode.c.o
+[9/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/dequant.c.o
+[10/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/encapiwrapper.c.o
+[11/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/encinfo.c.o
+[12/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/encfrag.c.o
+[13/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/encode.c.o
+[14/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/encoder_disabled.c.o
+[15/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/enquant.c.o
+[16/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/fragment.c.o
+[17/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/fdct.c.o
+[18/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/huffenc.c.o
+[19/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/huffdec.c.o
+[20/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/idct.c.o
+[21/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/info.c.o
+[22/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/internal.c.o
+[23/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/mathops.c.o
+[24/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/mcenc.c.o
+[25/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/quant.c.o
+[26/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/state.c.o
+[27/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/rate.c.o
+[28/63] Building C object CMakeFiles/libtheora.dir/dependencies/all/libtheora/lib/tokenize.c.o
+[29/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/main.cpp.o
+[30/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Core/Math.cpp.o
+[31/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Core/Reader.cpp.o
+[32/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Core/Link.cpp.o
+[33/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Storage/Text.cpp.o
+[34/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Palette.cpp.o
+[35/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Storage/Storage.cpp.o
+[36/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Scene3D.cpp.o
+[37/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Animation.cpp.o
+[38/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Sprite.cpp.o
+[39/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Drawing.cpp.o
+[40/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Dev/Debug.cpp.o
+[41/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Core/RetroEngine.cpp.o
+[42/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Video.cpp.o
+[43/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Audio/Audio.cpp.o
+In file included from C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/RSDKv5/RSDK/Audio/Audio.cpp:12:
+C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/dependencies/all\stb_vorbis/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[44/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Input/Input.cpp.o
+[45/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Scene/Objects/DefaultObject.cpp.o
+[46/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Scene/Objects/DevOutput.cpp.o
+[47/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/User/Core/UserPresence.cpp.o
+[48/63] Building CXX object CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/User/Core/UserStats.cpp.o
+^C
