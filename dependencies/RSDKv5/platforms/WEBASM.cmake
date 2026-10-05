@@ -198,6 +198,10 @@ add_custom_command(
         ${CMAKE_COMMAND} -E copy_if_different
         ${CMAKE_CURRENT_BINARY_DIR}/RSDKv5U.wasm
         ${WEB_OUTPUT_DIR}/RSDKv5U.wasm
+
+    COMMAND
+        ${CMAKE_COMMAND} -E touch
+        ${WEB_OUTPUT_DIR}/Settings.ini
 )
 
 # ============================
@@ -335,6 +339,14 @@ async function loadNormalRSDK() {
             true
         );
 
+        FS_createDataFile(
+            \"/\",
+            \"Settings.ini\",
+            new Uint8Array(),
+            true,
+            true
+        );
+
     });
 
 }
@@ -448,6 +460,14 @@ async function loadSplitRSDK() {
             \"/\",
             \"Data.rsdk\",
             combined,
+            true,
+            true
+        );
+
+        FS_createDataFile(
+            \"/\",
+            \"Settings.ini\",
+            new Uint8Array(),
             true,
             true
         );
