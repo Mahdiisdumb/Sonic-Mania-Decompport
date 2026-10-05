@@ -150,7 +150,6 @@ target_link_options(
     -sPTHREAD_POOL_SIZE=0
     -sEXPORTED_RUNTIME_METHODS=["ccall","cwrap"]
     -sFORCE_FILESYSTEM=1
-    -sASYNCIFY=1
 )
 
 # ============================
