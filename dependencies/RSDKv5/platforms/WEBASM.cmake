@@ -126,14 +126,12 @@ endif()
 target_compile_definitions(
     RetroEngine
     PRIVATE
-
     _CRT_SECURE_NO_WARNINGS
 )
 
 target_compile_options(
     RetroEngine
     PRIVATE
-
     -Wno-microsoft-cast
     -Wno-microsoft-exception-spec
 )
@@ -141,21 +139,15 @@ target_compile_options(
 target_link_options(
     RetroEngine
     PRIVATE
-
     -sUSE_SDL=2
     -sWASM=1
     -sNO_EXIT_RUNTIME=1
     -sASSERTIONS=1
-
     -sUSE_WEBGL2=1
     -sMIN_WEBGL_VERSION=2
-
     -sALLOW_MEMORY_GROWTH=1
-
     -sPTHREAD_POOL_SIZE=0
-
     -sEXPORTED_RUNTIME_METHODS=["ccall","cwrap"]
-
     -sFORCE_FILESYSTEM=1
 )
 
@@ -168,7 +160,6 @@ if(USE_MINIAUDIO)
     target_compile_definitions(
         RetroEngine
         PRIVATE
-
         RETRO_AUDIODEVICE_MINI=1
     )
 
@@ -223,6 +214,7 @@ file(
 <head>
 
     <meta charset=\"UTF-8\">
+
     <meta
         name=\"viewport\"
         content=\"width=device-width, initial-scale=1.0\"
@@ -266,75 +258,39 @@ file(
 
 <script>
 
-/*
-    ============================
-    RSDK CONFIGURATION
-    ============================
-*/
+const IS_PART_FILE = true;
 
-/*
-    Set this to true if the RSDK archive
-    is split into multiple files.
+const NORMAL_RSDK_FILE = \"game/Data.rsdk\";
 
-    false:
-        game/game.rsdk
-
-    true:
-        game/game.rsdk
-        game/game.rsdk.part1
-        game/game.rsdk.part2
-        etc.
-*/
-
-const IS_PART_FILE = false;
-
-
-/*
-    ============================
-    NORMAL RSDK
-    ============================
-*/
-
-/*
-    Used when IS_PART_FILE is false.
-*/
-
-const NORMAL_RSDK_FILE = \"game/game.rsdk\";
-
-
-/*
-    ============================
-    SPLIT RSDK
-    ============================
-*/
-
-/*
-    Used when IS_PART_FILE is true.
-*/
-
-const PART_RSDK_FILE = \"game/game.rsdk\";
-
-/*
-    Number of additional .part files.
-
-    Example:
-
-        game.rsdk
-        game.rsdk.part1
-        game.rsdk.part2
-        game.rsdk.part3
-
-    PART_COUNT = 3
-*/
+const PART_RSDK_FILE = \"game/Data.rsdk.part\";
 
 const PART_COUNT = 3;
 
 
-/*
-    ============================
-    RSDK LOADER
-    ============================
-*/
+var Module = {
+
+    canvas:
+        document.getElementById(\"canvas\"),
+
+    print: function(text) {
+        console.log(text);
+    },
+
+    printErr: function(text) {
+        console.error(text);
+    },
+
+    onRuntimeInitialized:
+        function() {
+
+            console.log(
+                \"RSDKv5U WebAssembly initialized.\"
+            );
+
+        }
+
+};
+
 
 async function loadNormalRSDK() {
 
@@ -343,9 +299,8 @@ async function loadNormalRSDK() {
         NORMAL_RSDK_FILE
     );
 
-    const response = await fetch(
-        NORMAL_RSDK_FILE
-    );
+    const response =
+        await fetch(NORMAL_RSDK_FILE);
 
     if (!response.ok) {
 
@@ -374,7 +329,7 @@ async function loadNormalRSDK() {
 
         FS_createDataFile(
             \"/\",
-            \"game.rsdk\",
+            \"Data.rsdk\",
             data,
             true,
             true
@@ -387,29 +342,7 @@ async function loadNormalRSDK() {
 
 async function loadSplitRSDK() {
 
-    console.log(
-        \"Loading split RSDK:\",
-        PART_RSDK_FILE
-    );
-
     const files = [];
-
-    /*
-        The base RSDK file is always loaded first.
-    */
-
-    files.push(
-        PART_RSDK_FILE
-    );
-
-    /*
-        Then load:
-
-        .part1
-        .part2
-        .part3
-        etc.
-    */
 
     for (
         let i = 1;
@@ -418,22 +351,16 @@ async function loadSplitRSDK() {
     ) {
 
         files.push(
-            PART_RSDK_FILE +
-            \".part\" +
-            i
+            PART_RSDK_FILE + i
         );
 
     }
 
     console.log(
-        \"RSDK files:\",
+        \"Loading RSDK parts:\",
         files
     );
 
-
-    /*
-        Fetch every part.
-    */
 
     const responses =
         await Promise.all(
@@ -442,10 +369,6 @@ async function loadSplitRSDK() {
             )
         );
 
-
-    /*
-        Make sure every part exists.
-    */
 
     for (
         let i = 0;
@@ -465,10 +388,6 @@ async function loadSplitRSDK() {
     }
 
 
-    /*
-        Convert every part into bytes.
-    */
-
     const buffers =
         await Promise.all(
             responses.map(
@@ -477,10 +396,6 @@ async function loadSplitRSDK() {
             )
         );
 
-
-    /*
-        Calculate the total size.
-    */
 
     let totalSize = 0;
 
@@ -494,19 +409,11 @@ async function loadSplitRSDK() {
     }
 
 
-    /*
-        Create one large buffer.
-    */
-
     const combined =
         new Uint8Array(
             totalSize
         );
 
-
-    /*
-        Append every part in order.
-    */
 
     let offset = 0;
 
@@ -532,11 +439,6 @@ async function loadSplitRSDK() {
     );
 
 
-    /*
-        Put the combined archive
-        into Emscripten's virtual filesystem.
-    */
-
     Module.preRun =
         Module.preRun || [];
 
@@ -544,7 +446,7 @@ async function loadSplitRSDK() {
 
         FS_createDataFile(
             \"/\",
-            \"game.rsdk\",
+            \"Data.rsdk\",
             combined,
             true,
             true
@@ -554,49 +456,6 @@ async function loadSplitRSDK() {
 
 }
 
-
-/*
-    ============================
-    Emscripten Module
-    ============================
-*/
-
-var Module = {
-
-    canvas:
-        document.getElementById(
-            \"canvas\"
-        ),
-
-    print: function(text) {
-
-        console.log(text);
-
-    },
-
-    printErr: function(text) {
-
-        console.error(text);
-
-    },
-
-    onRuntimeInitialized:
-        function() {
-
-            console.log(
-                \"RSDKv5U WebAssembly initialized.\"
-            );
-
-        }
-
-};
-
-
-/*
-    ============================
-    SELECT RSDK MODE
-    ============================
-*/
 
 async function prepareGame() {
 
@@ -611,14 +470,21 @@ async function prepareGame() {
 
     }
 
+
+    console.log(
+        \"RSDK archive ready.\"
+    );
+
+
+    const script =
+        document.createElement(\"script\");
+
+    script.src = \"RSDKv5U.js\";
+
+    document.body.appendChild(script);
+
 }
 
-
-/*
-    ============================
-    START
-    ============================
-*/
 
 prepareGame()
     .catch(function(error) {
@@ -639,8 +505,6 @@ prepareGame()
     });
 
 </script>
-
-<script src=\"RSDKv5U.js\"></script>
 
 </body>
 
