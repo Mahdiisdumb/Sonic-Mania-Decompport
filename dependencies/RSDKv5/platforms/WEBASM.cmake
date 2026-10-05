@@ -134,6 +134,7 @@ target_compile_options(
     PRIVATE
     -Wno-microsoft-cast
     -Wno-microsoft-exception-spec
+    -sUSE_SDL=2
 )
 
 target_link_options(
@@ -149,6 +150,7 @@ target_link_options(
     -sPTHREAD_POOL_SIZE=0
     -sEXPORTED_RUNTIME_METHODS=["ccall","cwrap"]
     -sFORCE_FILESYSTEM=1
+    -sASYNCIFY=1
 )
 
 # ============================
