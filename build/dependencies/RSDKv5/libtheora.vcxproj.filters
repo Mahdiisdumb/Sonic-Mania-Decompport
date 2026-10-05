@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\analyze.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\apiwrapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\bitpack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\decapiwrapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\decinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\dequant.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\encapiwrapper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\encfrag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\encinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\encoder_disabled.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\enquant.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\fdct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\fragment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\huffdec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\huffenc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\idct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\internal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\mathops.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\mcenc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\quant.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\rate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\state.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib\tokenize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D2D1F49-E4D3-34A1-AC1C-CB01E6CE0588}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

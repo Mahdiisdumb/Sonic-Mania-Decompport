@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\CMakeFiles\df96037418b5b97d9915a8eb7f1f31e7\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EC13CA71-2F05-3733-BF66-AC2A7A5D38F1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE49B179-9DE9-3C8F-B381-A4A4FDF4EB53}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>RetroEngine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RetroEngine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RSDKv5U</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RetroEngine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RSDKv5U</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RetroEngine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">RSDKv5U</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RetroEngine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">RSDKv5U</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA="DX9 - 1.1.1";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA=\"DX9 - 1.1.1\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/Debug/Game.dll C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dcompiler.lib;XInput.lib;winmm.lib;comctl32.lib;Debug\libogg.lib;Debug\libtheora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Debug/RSDKv5U.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Debug/RSDKv5U.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA="DX9 - 1.1.1";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA=\"DX9 - 1.1.1\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/Release/Game.dll C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dcompiler.lib;XInput.lib;winmm.lib;comctl32.lib;Release\libogg.lib;Release\libtheora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Release/RSDKv5U.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/Release/RSDKv5U.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA="DX9 - 1.1.1";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA=\"DX9 - 1.1.1\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/MinSizeRel/Game.dll C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dcompiler.lib;XInput.lib;winmm.lib;comctl32.lib;MinSizeRel\libogg.lib;MinSizeRel\libtheora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/MinSizeRel/RSDKv5U.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/MinSizeRel/RSDKv5U.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA="DX9 - 1.1.1";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;RETRO_REVISION=3;RSDK_USE_DX9=1;RETRO_USE_MOD_LOADER=1;RETRO_MOD_LOADER_VER=2;RETRO_STANDALONE=1;RSDK_AUTOBUILD=0;RETRO_DISABLE_LOG=0;RETRO_DEV_EXTRA=\"DX9 - 1.1.1\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\include\ogg;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\include;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libtheora\lib;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser;C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/RelWithDebInfo/Game.dll C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dcompiler.lib;XInput.lib;winmm.lib;comctl32.lib;RelWithDebInfo\libogg.lib;RelWithDebInfo\libtheora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/RelWithDebInfo/RSDKv5U.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/RelWithDebInfo/RSDKv5U.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/dependencies/RSDKv5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Mahdi/source/repos/Sonic-Webport/Mania -BC:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build --check-stamp-file C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\platforms\Windows.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/dependencies/RSDKv5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Mahdi/source/repos/Sonic-Webport/Mania -BC:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build --check-stamp-file C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\platforms\Windows.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/dependencies/RSDKv5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Mahdi/source/repos/Sonic-Webport/Mania -BC:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build --check-stamp-file C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\platforms\Windows.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/dependencies/RSDKv5/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Mahdi/source/repos/Sonic-Webport/Mania -BC:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build --check-stamp-file C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\platforms\Windows.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\main.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\RetroEngine.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Math.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Reader.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Link.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\ModAPI.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Dev\Debug.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Storage\Storage.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Storage\Text.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Drawing.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Scene3D.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Animation.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Sprite.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Palette.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Video.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Audio\Audio.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Input\Input.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Scene.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Collision.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Object.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Objects\DefaultObject.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Objects\DevOutput.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserAchievements.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserCore.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserLeaderboards.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserPresence.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserStats.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserStorage.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser\iniparser.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser\dictionary.cpp" />
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\miniz\miniz.c" />
+    <ResourceCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5U\RSDKv5U.rc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\ZERO_CHECK.vcxproj">
+      <Project>{5DB23041-B1F5-3C56-877A-009F38933113}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\SonicMania.vcxproj">
+      <Project>{C67D0E87-2AFB-3017-A139-F9BD5EBD37B8}</Project>
+      <Name>SonicMania</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\libogg.vcxproj">
+      <Project>{3CDD86ED-43AD-3510-B61C-04C7512238E2}</Project>
+      <Name>libogg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\build\dependencies\RSDKv5\libtheora.vcxproj">
+      <Project>{67163605-4859-366D-9BDE-EB0809287465}</Project>
+      <Name>libtheora</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

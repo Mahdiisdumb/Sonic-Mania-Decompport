@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\RetroEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\Link.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Core\ModAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Dev\Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Storage\Storage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Storage\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Drawing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Scene3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Palette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Graphics\Video.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Audio\Audio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Input\Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Objects\DefaultObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\Scene\Objects\DevOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserAchievements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserLeaderboards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserPresence.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserStats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5\RSDK\User\Core\UserStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\tinyxml2\tinyxml2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser\iniparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\iniparser\dictionary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\all\miniz\miniz.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\RSDKv5U\RSDKv5U.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D2D1F49-E4D3-34A1-AC1C-CB01E6CE0588}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

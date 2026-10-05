@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/cmake_install.cmake",
+		"C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

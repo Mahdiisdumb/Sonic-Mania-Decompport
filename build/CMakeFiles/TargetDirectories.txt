@@ -1,0 +1,7 @@
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/CMakeFiles/SonicMania.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/RetroEngine.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/libogg.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/libtheora.dir
+C:/Users/Mahdi/source/repos/Sonic-Webport/Mania/build/dependencies/RSDKv5/CMakeFiles/ALL_BUILD.dir

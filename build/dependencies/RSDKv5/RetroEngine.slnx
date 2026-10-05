@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<BuildType Name="Release"/>
+		<BuildType Name="MinSizeRel"/>
+		<BuildType Name="RelWithDebInfo"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="189b64ed-ab7b-3dbb-a6a9-2e06b722d15e" DefaultStartup="true">
+		<BuildDependency Project="RetroEngine.vcxproj"/>
+		<BuildDependency Project="../../ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="libogg.vcxproj"/>
+		<BuildDependency Project="libtheora.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="RetroEngine.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="de49b179-9de9-3c8f-b381-a4a4fdf4eb53">
+		<BuildDependency Project="../../SonicMania.vcxproj"/>
+		<BuildDependency Project="../../ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="libogg.vcxproj"/>
+		<BuildDependency Project="libtheora.vcxproj"/>
+	</Project>
+	<Project Path="../../SonicMania.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c67d0e87-2afb-3017-a139-f9bd5ebd37b8">
+		<BuildDependency Project="../../ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="../../ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="5db23041-b1f5-3c56-877a-009f38933113"/>
+	<Project Path="libogg.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="3cdd86ed-43ad-3510-b61c-04c7512238e2">
+		<BuildDependency Project="../../ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="libtheora.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="67163605-4859-366d-9bde-eb0809287465">
+		<BuildDependency Project="../../ZERO_CHECK.vcxproj"/>
+	</Project>
+</Solution>

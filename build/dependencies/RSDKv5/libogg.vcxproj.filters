@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\src\bitwise.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\dependencies\windows\libogg\src\framing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mahdi\source\repos\Sonic-Webport\Mania\dependencies\RSDKv5\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D2D1F49-E4D3-34A1-AC1C-CB01E6CE0588}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
