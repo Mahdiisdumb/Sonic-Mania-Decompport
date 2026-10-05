@@ -45,8 +45,13 @@ bool RenderDevice::Init()
     flags |= SDL_WINDOW_FULLSCREEN;
 #endif
 
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
+SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "nearest");
+
+#if RETRO_PLATFORM == RETRO_WEBASM
+    SDL_SetHint(SDL_HINT_RENDER_VSYNC, "0");
+#else
     SDL_SetHint(SDL_HINT_RENDER_VSYNC, videoSettings.vsync ? "1" : "0");
+#endif
 
     window = SDL_CreateWindow(gameTitle, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, videoSettings.windowWidth, videoSettings.windowHeight,
                               SDL_WINDOW_ALLOW_HIGHDPI | flags);

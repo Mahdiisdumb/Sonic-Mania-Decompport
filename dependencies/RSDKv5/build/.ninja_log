@@ -38,7 +38,7 @@
 3254	7010	8128657511079278	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Sprite.cpp.o	47ed78164709dccc
 3330	7156	8128657512080686	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Palette.cpp.o	e45d008826294e0e
 2467	7190	8128657503195874	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Dev/Debug.cpp.o	4a40a293311be1cd
-2804	7425	8128657507165188	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Drawing.cpp.o	561ac5961a6581f7
+29	1573	8128662714291190	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Drawing.cpp.o	561ac5961a6581f7
 1847	7573	8128657497188290	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Core/RetroEngine.cpp.o	7446e95906a7487d
 5185	8654	8128657530624650	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Graphics/Video.cpp.o	cb7473e123732c61
 5645	9403	8128657534974517	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Audio/Audio.cpp.o	61cba67bdd00c63b
@@ -61,4 +61,4 @@
 10528	12166	8128657583805733	CMakeFiles/RetroEngine.dir/dependencies/all/miniz/miniz.c.o	91744938b7f71fe4
 6523	12209	8128657543754761	CMakeFiles/RetroEngine.dir/RSDKv5/RSDK/Scene/Object.cpp.o	af3d1a97bf603b05
 9899	12437	8128657577512552	CMakeFiles/RetroEngine.dir/dependencies/all/iniparser/iniparser.cpp.o	3ef9ed7862975a4a
-12437	14103	8128657602889197	RSDKv5U.js	dd1dcf50f890ad3f
+1574	3328	8128662729738462	RSDKv5U.js	dd1dcf50f890ad3f
