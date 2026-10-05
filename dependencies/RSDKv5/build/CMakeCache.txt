@@ -230,9 +230,6 @@ RETRO_OUTPUT_NAME:STRING=RSDKv5U
 //What revision to compile for. Defaults to v5U = 3
 RETRO_REVISION:STRING=3
 
-//The subsystem to use
-RETRO_SUBSYSTEM:STRING=SDL2
-
 //Value Computed by CMake
 RetroEngine_BINARY_DIR:STATIC=C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build
 

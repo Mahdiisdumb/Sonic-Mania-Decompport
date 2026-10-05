@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RSDKv5U Web</title>
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            background: #000;
+            image-rendering: pixelated;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+
+const IS_PART_FILE = true;
+
+const NORMAL_RSDK_FILE = "game/Data.rsdk";
+
+const PART_RSDK_FILE = "game/Data.rsdk.part";
+
+const PART_COUNT = 3;
+
+
+var Module = {
+
+    canvas:
+        document.getElementById("canvas"),
+
+    print: function(text) {
+        console.log(text);
+    },
+
+    printErr: function(text) {
+        console.error(text);
+    },
+
+    onRuntimeInitialized:
+        function() {
+
+            console.log(
+                "RSDKv5U WebAssembly initialized."
+            );
+
+        }
+
+};
+
+
+async function loadNormalRSDK() {
+
+    console.log(
+        "Loading RSDK:",
+        NORMAL_RSDK_FILE
+    );
+
+    const response =
+        await fetch(NORMAL_RSDK_FILE);
+
+    if (!response.ok) {
+
+        throw new Error(
+            "Failed to load RSDK file: " +
+            NORMAL_RSDK_FILE
+        );
+
+    }
+
+    const data =
+        new Uint8Array(
+            await response.arrayBuffer()
+        );
+
+    console.log(
+        "RSDK size:",
+        data.byteLength,
+        "bytes"
+    );
+
+    Module.preRun =
+        Module.preRun || [];
+
+    Module.preRun.push(function() {
+
+        FS_createDataFile(
+            "/",
+            "Data.rsdk",
+            data,
+            true,
+            true
+        );
+
+        FS_createDataFile(
+            "/",
+            "Settings.ini",
+            new Uint8Array(),
+            true,
+            true
+        );
+
+    });
+
+}
+
+
+async function loadSplitRSDK() {
+
+    const files = [];
+
+    for (
+        let i = 1;
+        i <= PART_COUNT;
+        i++
+    ) {
+
+        files.push(
+            PART_RSDK_FILE + i
+        );
+
+    }
+
+    console.log(
+        "Loading RSDK parts:",
+        files
+    );
+
+
+    const responses =
+        await Promise.all(
+            files.map(
+                file => fetch(file)
+            )
+        );
+
+
+    for (
+        let i = 0;
+        i < responses.length;
+        i++
+    ) {
+
+        if (!responses[i].ok) {
+
+            throw new Error(
+                "Failed to load RSDK part: " +
+                files[i]
+            );
+
+        }
+
+    }
+
+
+    const buffers =
+        await Promise.all(
+            responses.map(
+                response =>
+                    response.arrayBuffer()
+            )
+        );
+
+
+    let totalSize = 0;
+
+    for (
+        const buffer of buffers
+    ) {
+
+        totalSize +=
+            buffer.byteLength;
+
+    }
+
+
+    const combined =
+        new Uint8Array(
+            totalSize
+        );
+
+
+    let offset = 0;
+
+    for (
+        const buffer of buffers
+    ) {
+
+        combined.set(
+            new Uint8Array(buffer),
+            offset
+        );
+
+        offset +=
+            buffer.byteLength;
+
+    }
+
+
+    console.log(
+        "Combined RSDK size:",
+        combined.byteLength,
+        "bytes"
+    );
+
+
+    Module.preRun =
+        Module.preRun || [];
+
+    Module.preRun.push(function() {
+
+        FS_createDataFile(
+            "/",
+            "Data.rsdk",
+            combined,
+            true,
+            true
+        );
+
+        FS_createDataFile(
+            "/",
+            "Settings.ini",
+            new Uint8Array(),
+            true,
+            true
+        );
+
+    });
+
+}
+
+
+async function prepareGame() {
+
+    if (IS_PART_FILE) {
+
+        await loadSplitRSDK();
+
+    }
+    else {
+
+        await loadNormalRSDK();
+
+    }
+
+
+    console.log(
+        "RSDK archive ready."
+    );
+
+
+    const script =
+        document.createElement("script");
+
+    script.src = "RSDKv5U.js";
+
+    document.body.appendChild(script);
+
+}
+
+
+prepareGame()
+    .catch(function(error) {
+
+        console.error(error);
+
+        document.body.innerHTML =
+            '<pre style="' +
+            'color:white;' +
+            'font-family:monospace;' +
+            'padding:20px;' +
+            'white-space:pre-wrap;' +
+            '">' +
+            'Failed to load game.\n\n' +
+            error.message +
+            '</pre>';
+
+    });
+
+</script>
+
+</body>
+
+</html>

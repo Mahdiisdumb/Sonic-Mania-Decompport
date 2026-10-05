@@ -8,7 +8,7 @@ if(NOT EMSCRIPTEN)
     )
 endif()
 
-set(RETRO_SUBSYSTEM "SDL2" CACHE STRING "The subsystem to use")
+set(RETRO_SUBSYSTEM "SDL2")
 
 set(DEP_PATH all)
 
@@ -22,12 +22,6 @@ add_executable(
 # ============================
 # SDL2
 # ============================
-
-target_compile_options(
-    RetroEngine
-    PRIVATE
-    -sUSE_SDL=2
-)
 
 # ============================
 # OGG
@@ -132,9 +126,9 @@ target_compile_definitions(
 target_compile_options(
     RetroEngine
     PRIVATE
+    -sUSE_SDL=2
     -Wno-microsoft-cast
     -Wno-microsoft-exception-spec
-    -sUSE_SDL=2
 )
 
 target_link_options(
@@ -143,6 +137,7 @@ target_link_options(
     -sUSE_SDL=2
     -sWASM=1
     -sNO_EXIT_RUNTIME=1
+    -sASYNCIFY=1
     -sASSERTIONS=1
     -sUSE_WEBGL2=1
     -sMIN_WEBGL_VERSION=2
