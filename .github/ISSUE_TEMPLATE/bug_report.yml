@@ -7,7 +7,7 @@ body:
     attributes:
       label: Before opening this issue, I ensure that...
       options:
-      - label: I have read the [FAQ](https://github.com/RSDKModding/Sonic-Mania-Decompilation?tab=readme-ov-file#faq) and confirmed my issue is not mentioned in it.
+      - label: I have read the [FAQ](https://github.com/RSDKModding/RSDKv5-Decompilation/blob/master/FAQ.md) and confirmed my issue is not mentioned in it.
         required: true
       - label: I have checked **both open and closed** issues and confirmed this bug has not already been reported.
         required: true
@@ -55,7 +55,7 @@ body:
       required: false
     attributes:
       label: Log File
-      description: The RSDKv5(U) decompilation automatically writes console output to a log file named log.txt. You can provide it here if you believe it will be helpful.
+      description: The decompilation automatically writes console output to a log file named log.txt. You can provide it here if you believe it will be helpful.
   - id: decomp-version
     type: input
     validations:
@@ -63,32 +63,32 @@ body:
     attributes:
       label: Decompilation Version
       description: The decompilation version. If you built it manually or are using an autobuild, please specify the commit if possible.
-  - id: gameversion
-    type: dropdown
-    validations:
-      required: true
-    attributes:
-      label: "Game Version"
-      description: The version of the game used. By default, this is 1.06.
-      multiple: false
-      options:
-        - 1.00 - 1.02 (Initial console release)
-        - 1.03 (Initial Steam release, last Pre-Plus release)
-        - 1.04 / 1.05 (Mania Plus release)
-        - 1.06 (Latest Steam release)
-        - 1.07 (EGS/Origin release)
   - id: enginerevision
     type: dropdown
     validations:
       required: true
     attributes:
       label: "Engine Revision"
-      description: The revision of RSDKv5 used. By default, this is REV0U.
+      description: The revision of the engine used. By default, this is REV0U.
       multiple: false
       options:
         - REV0U (RSDKv5U)
         - REV02 (RSDKv5 - Mania Plus)
         - REV01 (RSDKv5 - Mania Pre-Plus)
+  - id: backend
+    type: dropdown
+    validations:
+      required: true
+    attributes:
+      label: "Backend"
+      description: The backend used for rendering, inputs, etc. By default, this is DirectX 9 on Windows and OpenGL on other platforms.
+      multiple: false
+      options:
+        - DirectX 9
+        - DirectX 11
+        - OpenGL
+        - SDL2
+        - Vulkan
   - id: platform
     type: input
     validations:

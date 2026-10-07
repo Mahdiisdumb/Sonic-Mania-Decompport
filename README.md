@@ -1,25 +1,20 @@
-# **SUPPORT THE OFFICIAL RELEASE OF SONIC MANIA (PLUS)**
-+ Without assets from the official releases, this decompilation will not run.
+![header](header.png?raw=true)
 
-+ You can get the official release of Sonic Mania (Plus) from:
-  * Windows
-    * [Via Steam](https://store.steampowered.com/app/584400/Sonic_Mania/)
-    * [Via The Epic Games Store](https://www.epicgames.com/store/en-US/p/sonic-mania)
-  * [Switch, via the eShop](https://www.nintendo.com/games/detail/sonic-mania-switch/)
-  * [PS4, via the Store](https://store.playstation.com/en-us/product/UP0177-CUSA07023_00-SONICMANIA000000)
-  * [Xbox One, via the Store](https://www.xbox.com/en-US/games/store/sonic-mania/BXH46NQT9W4Q/0001)
+A complete decompilation of Retro Engine v5 and v5Ultimate.
 
-Even if your platform isn't supported by the above official releases, you **must** buy it for the assets. The Netflix Games version is NOT supported.
+# **SUPPORT THE DEVELOPERS OF THE RETRO ENGINE**
+We do not own the Retro Engine in any way, shape or form, and this project would not have been possible had they not developed RSDKv5(U) in the first place. Retro Engine is currently owned by [Evening Star](https://eveningstar.studio/); we highly urge you to follow & support their projects if you enjoyed this project of ours!
 
-## **DO NOT USE THIS DECOMPILATION PROJECT AS A MEANS TO PIRATE SONIC MANIA (PLUS)**
-We do not condone using this project as a means for piracy in any form. This project was made with love and care for the source material and was created for purely educational purposes, and would not exist without the work of Sega, Headcannon, and Evening Star.
-
-If you want to transfer your save from the official PC versions, you can just copy your savedata into the folder containing the decompilation!
+## **DO NOT USE THIS DECOMPILATION PROJECT AS A MEANS TO PIRATE SONIC MANIA (PLUS) OR ANY OTHER RSDKv5(U) GAMES.**
+We do not condone using this project as a means for piracy in any form. This project was made with love and care for the source material and was created for purely educational purposes.
 
 # Additional Tweaks
-* Added a built-in mod loader and API calls to enable a much smoother modding experience.
-* Added support for targeting RSDKv5U rather than standalone RSDKv5
-* Added support for building almost all released versions of the game. Including: 1.00 (Console initial release), 1.03 (PC initial release) & 1.06 (Plus update)
+* Added a built-in mod loader and API allowing to easily create and play mods with features such as save file redirection and XML asset loading, supported by all sub-versions of v5U.
+* Added a built-in shader compiler for backends/platforms that support it.
+* Added various other backends to windows aside from the usual DirectX 9 backends
+
+## If you are here for Sonic Mania:
+You have the option of building RSDKv5 alongside Mania in [the Sonic Mania Decompilation repo](https://github.com/RSDKModding/Sonic-Mania-Decompilation).
 
 # How to Build
 
@@ -32,14 +27,12 @@ This project uses [CMake](https://cmake.org/), a versatile building system that 
 Instead, you will need to clone the repository using Git, which you can get [here](https://git-scm.com/downloads).
 
 Clone the repo **recursively**, using:
-`git clone --recursive https://github.com/RSDKModding/Sonic-Mania-Decompilation`
+`git clone --recursive https://github.com/RSDKModding/RSDKv5-Decompilation`
 
 If you've already cloned the repo, run this command inside of the repository:
-```git submodule update --init --recursive```
+```git submodule update --init```
 
 ## Getting dependencies
-
-This repo includes everything you need for Sonic Mania + RSDKv5(U). If you wish to compile only Sonic Mania, you can skip to the [compilation steps below](#compiling) and compile with the `WITH_RSDK` flag disabled.
 
 ### Windows
 To handle dependencies, you'll need to install [Visual Studio Community](https://visualstudio.microsoft.com/downloads/) (make sure to install the `Desktop development with C++` package during the installation) and [vcpkg](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-cmd#1---set-up-vcpkg) (You only need to follow `1 - Set up vcpkg`).
@@ -57,9 +50,9 @@ Install the following dependencies: then follow the [compilation steps below](#c
 - **apt (Debian/Ubuntu):** `sudo apt install build-essential cmake libglew-dev libglfw3-dev libtheora-dev`
 - **rpm (Fedora):** `sudo dnf install make cmake gcc glew-devel glfw-devel libtheora-devel zlib-devel`
 - **xbps (Void):** `sudo xbps-install make cmake gcc pkg-config glew-devel glfw-devel libtheora-devel zlib-devel`
-- Your favorite package manager here, [make a pull request](https://github.com/RSDKModding/Sonic-Mania-Decompilation/fork) (also update [RSDKv5U](https://github.com/RSDKModding/RSDKv5-Decompilation)!)
+- Your favorite package manager here, [make a pull request](https://github.com/RSDKModding/RSDKv5-Decompilation/fork) (also update [Mania](https://github.com/RSDKModding/Sonic-Mania-Decompilation)!)
 
-#### (make sure to [install GL shaders!](#q-why-arent-videosfilters-working-while-using-gl))
+#### (make sure to [install GL shaders!](FAQ.md#q-why-arent-videosfilters-working-while-using-gl))
 
 ### Switch
 [Setup devKitPro](https://devkitpro.org/wiki/Getting_Started), then run the following:
@@ -67,10 +60,10 @@ Install the following dependencies: then follow the [compilation steps below](#c
 
 Finally, follow the [compilation steps below](#compiling) using `-DCMAKE_TOOLCHAIN_FILE=/opt/devkitpro/cmake/Switch.cmake` as arguments for `cmake -B build`.
 
-#### (make sure to [install GL shaders!](#q-why-arent-videosfilters-working-while-using-gl))
+#### (make sure to [install GL shaders!](FAQ.md#q-why-arent-videosfilters-working-while-using-gl))
 
 ### Android
-**Ensure you clone the repo recursively,** then follow the RSDK build instructions [here.](https://github.com/RSDKModding/RSDKv5-Decompilation/blob/master/dependencies/android/README.md)
+Follow the android build instructions [here.](./dependencies/android/README.md)
 
 ## Compiling
 
@@ -80,8 +73,7 @@ cmake -B build
 cmake --build build --config release
 ```
 
-The resulting build for Mania will be located somewhere in `build/` depending on your system.
-If building with RSDKv5(U), the resulting Mania and RSDK executable will likely be in `build/dependencies/RSDKv5/`.
+The resulting build will be located somewhere in `build/` depending on your system.
 
 The following cmake arguments are available when compiling:
 - Use these by adding `-D[flag-name]=[value]` to the end of the `cmake -B build` command. For example, to build with `RETRO_DISABLE_PLUS` set to on, add `-DRETRO_DISABLE_PLUS=on` to the command.
@@ -91,56 +83,27 @@ The following cmake arguments are available when compiling:
 - `RETRO_DISABLE_PLUS`: Whether or not to disable the Plus DLC. Takes a boolean (on/off): build with `on` when compiling for distribution. Defaults to `off`.
 - `RETRO_MOD_LOADER`: Enables or disables the mod loader. Takes a boolean, defaults to `on`.
 - `RETRO_MOD_LOADER_VER`: Manually sets the mod loader version. Takes an integer, defaults to the current latest version.
+- `RETRO_DISABLE_LOG`: Disables the log. Not recommended unless it impacts performance. Takes a boolean, defaults to `off`.
 - `RETRO_SUBSYSTEM`: *Only change this if you know what you're doing.* Changes the subsystem that RSDKv5 will be built for. Defaults to the most standard subsystem for the platform.
 
-### Sonic Mania flags
-- `WITH_RSDK`: Whether or not RSDKv5 is built alongside Sonic Mania. Takes a boolean, defaults to `on`.
-  - `GAME_STATIC`: Whether or not to build Sonic Mania into the resulting RSDKv5 executable. Takes a boolean, defaults change depending on the system.
-- `MANIA_FIRST_RELEASE`: Whether or not to build the first console release of Sonic Mania. Takes a boolean, defaults to `off`.
-- `MANIA_PRE_PLUS`: Whether or not to build a pre-plus version of Sonic Mania. Takes a boolean, defaults to `off`.
-- `GAME_INCLUDE_EDITOR`: Whether or not to include functions for use in certain RSDKv5 scene editors. Takes a boolean, defaults to `on`.
-- `GAME_VERSION`: Which release version of Sonic Mania to target for. Takes an integer, defaults to `3` when `MANIA_PRE_PLUS` is enabled, and `6` otherwise (last steam release).
+## Other Platforms
+Currently, the only officially supported platforms are the ones listed above.
 
-### Other Platforms
-The only directly supported platforms are those listed above. Since Mania is very easy to build, requiring no additional dependencies, virtually any platform that can run RSDKv5 can compile Mania easily.
-
-However, there are a multitude of ports listed in the **[RSDKv5 repository.](https://github.com/RSDKModding/RSDKv5-Decompilation)**
+**However,** since release, there have been a multitude of forks made by the community (keep in mind that many of these ports are still a WIP, and some may be out of date): 
+* ### [WebASM](https://github.com/heyjoeway/RSDKv5-Decompilation/tree/emscripten) by heyjoeway 
+* ### [New 3DS](https://github.com/SaturnSH2x2/RSDKv5-Decompilation/tree/3ds-main) by SaturnSH2x2
+* ### [Wii U](https://github.com/Radfordhound/RSDKv5-Decompilation) by Radfordhound
+* ### [Wii U](https://github.com/Clownacy/Sonic-Mania-Decompilation) by Clownacy
+* ### [Wii](https://github.com/Mefiresu/RSDKv5-Decompilation/tree/dev/wii-port) by Mefiresu
+* ### [Vita](https://github.com/SonicMastr/Sonic-Mania-Vita) by SonicMastr
+* #### and a [general optimization fork](https://github.com/smb123w64gb/RSDKv5-Decompilation) by smb123w64gb
 
 # FAQ
-### Q: Why aren't videos/filters working while using GL?
-A: There's a mod for it that you have to make. Refer to the following directions:
-
-Create the following directory structure inside your mods directory:
-```
-GLShaders/
-| Data/
-| | ...
-| mod.ini
-```
-
-Inside `mods/GLShaders/Data/`, copy the `RSDKv5/Shaders` directory, and inside the `mod.ini`, paste this:
-```
-Name=GLShaders
-Description=GL3 shaders
-Author=Ducky
-Version=1.0.0
-TargetVersion=5
-```
-
-### Q: I found a bug!
-A: Submit an issue in the Issues tab and we might look into it. Keep in mind that this is a decompilation, so bugs that exist in official releases will most likely not be fixed here.
-
-### Q: Will you add support for the Netflix Games version of Mania?
-A: No. There are several reasons for this: the APIs introduced in the port that we'd have to deal with, the pressure of having to maintain support for a version that's being frequently updated, concerns over piracy, and a general disinterest in the port. If you want to play the decomp on mobile with touch controls, there's a [mod](https://github.com/RSDKModding/RSDKv5-Example-Mods/tree/master/ManiaTouchControls) for that you can use instead.
-
-### Q: Will you do a decompilation for Sonic CD (2011) and/or Sonic 1/2 (2013)?
-A: I already have! You can find Sonic CD [here](https://github.com/RSDKModding/RSDKv3-Decompilation) and Sonic 1/2 [here](https://github.com/RSDKModding/RSDKv4-Decompilation).
-
-### Q: Are there anymore decompilation projects in the works, such as Sonic Origins/Sonic 3 & Knuckles?
-A: Absolutely not. This project took about 1 and a half years to do, and doing Sonic 3 & Knuckles would take equally as long, if not longer, as it's not only larger in scope, but Origins' hybrid codebase makes it harder to read. Between our other decompilation projects and this one, we're done with decompiling, at least for the time being. We would also like to expand our horizons beyond Sonic going forward, and we don't wish to spend forever just playing catchup with Sega's official releases. Please do not expect any more decompilations from us, Sonic or otherwise!
+You can find the FAQ [here](./FAQ.md).
 
 # Special Thanks
 * [st×tic](https://github.com/stxticOVFL) for leading ModAPI development, porting to other platforms, general decompilation assistance, helping me fix bugs, tweaking up my sometimes sloppy code and generally being really helpful and fun to work with on this project
+* [biscuitball425](https://github.com/biscuitball425) for making v5 and v5U assets with st×tic such as the header and icons
 * Everyone in the [Retro Engine Modding Server](https://dc.railgun.works/retroengine) for being supportive of me and for giving me a place to show off these things that I've found
 
 # Contact:

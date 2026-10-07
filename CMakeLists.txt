@@ -1,109 +1,225 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 
-project(SonicMania)
+project(RetroEngine)
 
-option(WITH_RSDK "Whether or not to build with RSDKv5. Defaults to true" ON)
+set(DECOMP_VERSION 1.1.1)
 
-if(NOT DEFINED GAME_STATIC)
+set(RETRO_REVISION 3 CACHE STRING "What revision to compile for. Defaults to v5U = 3")
+option(RETRO_DISABLE_PLUS "Disable plus. Should be set on for any public releases." OFF)
+
+option(RETRO_MOD_LOADER "Enables or disables the mod loader." ON)
+set(RETRO_MOD_LOADER_VER 2 CACHE STRING "Sets the mod loader version. Defaults to latest")
+
+option(RETRO_DISABLE_LOG "Disables the log. Defaults to OFF." OFF)
+
+set(RETRO_NAME "RSDKv5")
+
+if(RETRO_REVISION STREQUAL "3")
+    set(RETRO_NAME "RSDKv5U")
+endif()
+
+set(RETRO_OUTPUT_NAME ${RETRO_NAME} CACHE STRING "The exported name of the executable.")
+
+set(RETRO_FILES
+    RSDKv5/main.cpp
+
+    RSDKv5/RSDK/Core/RetroEngine.cpp
+    RSDKv5/RSDK/Core/Math.cpp
+    RSDKv5/RSDK/Core/Reader.cpp
+    RSDKv5/RSDK/Core/Link.cpp
+    RSDKv5/RSDK/Core/ModAPI.cpp
+
+    RSDKv5/RSDK/Dev/Debug.cpp
+
+    RSDKv5/RSDK/Storage/Storage.cpp
+    RSDKv5/RSDK/Storage/Text.cpp
+
+    RSDKv5/RSDK/Graphics/Drawing.cpp
+    RSDKv5/RSDK/Graphics/Scene3D.cpp
+    RSDKv5/RSDK/Graphics/Animation.cpp
+    RSDKv5/RSDK/Graphics/Sprite.cpp
+    RSDKv5/RSDK/Graphics/Palette.cpp
+    RSDKv5/RSDK/Graphics/Video.cpp
+
+    RSDKv5/RSDK/Audio/Audio.cpp
+
+    RSDKv5/RSDK/Input/Input.cpp
+
+    RSDKv5/RSDK/Scene/Scene.cpp
+    RSDKv5/RSDK/Scene/Collision.cpp
+    RSDKv5/RSDK/Scene/Object.cpp
+    RSDKv5/RSDK/Scene/Objects/DefaultObject.cpp
+    RSDKv5/RSDK/Scene/Objects/DevOutput.cpp
+
+    RSDKv5/RSDK/User/Core/UserAchievements.cpp
+    RSDKv5/RSDK/User/Core/UserCore.cpp
+    RSDKv5/RSDK/User/Core/UserLeaderboards.cpp
+    RSDKv5/RSDK/User/Core/UserPresence.cpp
+    RSDKv5/RSDK/User/Core/UserStats.cpp
+    RSDKv5/RSDK/User/Core/UserStorage.cpp
+
+    dependencies/all/tinyxml2/tinyxml2.cpp
+
+    dependencies/all/iniparser/iniparser.cpp
+    dependencies/all/iniparser/dictionary.cpp
+
+    dependencies/all/miniz/miniz.c
+)
+
+if(NOT PLATFORM)
     if(WIN32)
-        set(GAME_STATIC OFF)
-    elseif(UNIX)
-        set(GAME_STATIC OFF)
+        set(PLATFORM "Windows" CACHE STRING "The platform to compile for.")
+    elseif(ANDROID)
+        set(PLATFORM "Android" CACHE STRING "The platform to compile for.")
     else()
-        set(GAME_STATIC ON)
+        set(PLATFORM ${CMAKE_SYSTEM_NAME} CACHE STRING "The platform to compile for.")
     endif()
 endif()
 
-option(GAME_STATIC "Whether or not to build the game as a static library." $<BOOL:$<IF:WITH_RSDK,ON,OFF>>)
+include(platforms/${PLATFORM}.cmake)
 
-option(MANIA_FIRST_RELEASE "Whether or not to build Mania's first release. Defaults to false" OFF)
-
-if(MANIA_FIRST_RELEASE)
-    set(MANIA_PREPLUS ON)
-else()
-    option(MANIA_PREPLUS "Whether or not to build Mania pre-plus. Defaults to false" OFF)
-endif()
-
-if(NOT MANIA_PREPLUS)
-    set(GAME_VERSION 6 CACHE STRING "The game version to use. Defaults to 6 == Last Steam release")
-else()
-    set(GAME_VERSION 3 CACHE STRING "The game version to use. Defaults to 3 == Last pre-plus release")
-endif()
-
-set(GAME_NAME "SonicMania" CACHE STRING "The game directory to look into")
-set(GAME_OUTPUT_NAME "Game" CACHE STRING "The name of the built library")
-
-option(GAME_INCLUDE_EDITOR "Whether or not to include editor functions. Defaults to true" ON)
-
-option(GAME_INCREMENTAL_BUILD "Whether or not to build all objects separately (for quicker dev-->build iterations). Defaults to false" OFF)
-
-if(GAME_INCREMENTAL_BUILD)
-    include(${GAME_NAME}/Objects.cmake)
-
-    set(GAME_SOURCES
-        ${GAME_NAME}/Game.c
-        ${GENERATED_SOURCES}
+if(RETRO_MOD_LOADER)
+    set_target_properties(RetroEngine PROPERTIES
+        CXX_STANDARD 17
+        CXX_STANDARD_REQUIRED ON
     )
 else()
-    set(GAME_SOURCES
-        ${GAME_NAME}/Game.c
-        ${GAME_NAME}/Objects/All.c
+    set_target_properties(RetroEngine PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED ON
     )
 endif()
 
-if(GAME_STATIC)
-    add_library(${GAME_NAME} STATIC ${GAME_SOURCES})
-else()
-    add_library(${GAME_NAME} SHARED ${GAME_SOURCES})
-endif()
-
-target_include_directories(${GAME_NAME} PRIVATE
-    ${GAME_NAME}/
-    ${GAME_NAME}/Objects/
+set_target_properties(RetroEngine PROPERTIES
+    OUTPUT_NAME ${RETRO_OUTPUT_NAME}
 )
 
-if(WIN32)
-    target_compile_definitions(${GAME_NAME} PRIVATE
-        _CRT_SECURE_NO_WARNINGS
+if(COMPILE_OGG)
+
+    set(OGG_DIR dependencies/${DEP_PATH}/libogg)
+
+    add_library(libogg STATIC
+        ${OGG_DIR}/src/bitwise.c
+        ${OGG_DIR}/src/framing.c
+    )
+
+    target_compile_options(libogg PRIVATE
+        ${OGG_FLAGS}
+    )
+
+    target_include_directories(libogg PRIVATE
+        ${OGG_DIR}/include
+        ${OGG_DIR}/include/ogg
+    )
+
+    target_include_directories(RetroEngine PRIVATE
+        ${OGG_DIR}/include
+        ${OGG_DIR}/include/ogg
+    )
+
+    target_link_libraries(RetroEngine
+        libogg
+    )
+
+endif()
+
+if(COMPILE_THEORA)
+
+    set(THEORA_DIR dependencies/${DEP_PATH}/libtheora)
+
+    file(GLOB THEORA_SOURCES
+        ${THEORA_DIR}/lib/*.c
+    )
+
+    if(NOT THEORA_SOURCES)
+        message(FATAL_ERROR
+            "No libtheora source files were found in ${THEORA_DIR}/lib"
+        )
+    endif()
+
+    add_library(libtheora STATIC
+        ${THEORA_SOURCES}
+    )
+
+    target_compile_options(libtheora PRIVATE
+        ${THEORA_FLAGS}
+    )
+
+    target_include_directories(libtheora PRIVATE
+        ${THEORA_DIR}/include
+        ${THEORA_DIR}/lib
+        ${OGG_DIR}/include
+        ${OGG_DIR}/include/ogg
+    )
+
+    target_include_directories(RetroEngine PRIVATE
+        ${THEORA_DIR}/include
+        ${THEORA_DIR}/lib
+        ${OGG_DIR}/include
+        ${OGG_DIR}/include/ogg
+    )
+
+    target_link_libraries(RetroEngine
+        libtheora
+    )
+
+endif()
+
+target_include_directories(RetroEngine PRIVATE
+    RSDKv5/
+    dependencies/all/
+    dependencies/all/tinyxml2/
+    dependencies/all/iniparser/
+)
+
+if(DEFINED DEP_PATH)
+    target_include_directories(RetroEngine PRIVATE
+        dependencies/${DEP_PATH}/
     )
 endif()
 
-set_target_properties(${GAME_NAME} PROPERTIES
-    OUTPUT_NAME ${GAME_OUTPUT_NAME}
+if(NOT DEFINED GAME_STATIC)
+    set(GAME_STATIC OFF)
+endif()
+
+target_compile_definitions(RetroEngine PRIVATE
+
+    RETRO_REVISION=${RETRO_REVISION}
+
+    RSDK_USE_${RETRO_SUBSYSTEM}=1
+
+    RETRO_USE_MOD_LOADER=$<BOOL:${RETRO_MOD_LOADER}>
+    RETRO_MOD_LOADER_VER=${RETRO_MOD_LOADER_VER}
+
+    RETRO_STANDALONE=$<NOT:$<BOOL:${GAME_STATIC}>>
+
+    RSDK_AUTOBUILD=$<BOOL:${RETRO_DISABLE_PLUS}>
+    RETRO_DISABLE_LOG=$<BOOL:${RETRO_DISABLE_LOG}>
+
+    RETRO_DEV_EXTRA="${RETRO_SUBSYSTEM} - ${DECOMP_VERSION}"
 )
 
 if(WITH_RSDK)
-    set(RSDK_PATH dependencies/RSDKv5 CACHE STRING "The path to look for RSDKv5 if using WITH_RSDK.")
 
-    add_subdirectory(${RSDK_PATH})
+    if(NOT GAME_STATIC)
 
-    if(GAME_STATIC)
-        target_include_directories(RetroEngine PRIVATE
-            ${GAME_NAME}/
+        add_custom_command(
+            TARGET RetroEngine
+            POST_BUILD
+
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_FILE:${GAME_NAME}>
+            $<TARGET_FILE_DIR:RetroEngine>
         )
 
-        target_link_libraries(
-            RetroEngine
-            ${GAME_NAME}
-        )
     endif()
-else()
-    set(RETRO_REVISION 3 CACHE STRING "What revision to compile for. Defaults to v5U = 3")
-
-    option(RETRO_MOD_LOADER "Enables or disables the mod loader." ON)
-
-    set(
-        RETRO_MOD_LOADER_VER
-        2
-        CACHE STRING
-        "Sets the mod loader version. Defaults to latest"
-    )
 
     target_compile_definitions(${GAME_NAME} PRIVATE
+
         RETRO_REVISION=${RETRO_REVISION}
 
         RETRO_USE_MOD_LOADER=$<BOOL:${RETRO_MOD_LOADER}>
-        RETRO_MOD_LOADER_VER=${RETRO_MOD_LOADER_VER>
+        RETRO_MOD_LOADER_VER=${RETRO_MOD_LOADER_VER}
 
         GAME_INCLUDE_EDITOR=$<BOOL:${GAME_INCLUDE_EDITOR}>
 
@@ -111,14 +227,5 @@ else()
         MANIA_FIRST_RELEASE=$<BOOL:${MANIA_FIRST_RELEASE}>
         GAME_VERSION=${GAME_VERSION}
     )
-endif()
 
-if(MSVC)
-    target_compile_options(${GAME_NAME} PRIVATE
-        /FS
-    )
-
-    target_link_options(${GAME_NAME} PRIVATE
-        /OPT:NOICF
-    )
 endif()

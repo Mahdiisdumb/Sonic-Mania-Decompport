@@ -1,5 +1,0 @@
-C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build/CMakeFiles/RetroEngine.dir
-C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build/CMakeFiles/libogg.dir
-C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build/CMakeFiles/libtheora.dir
-C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build/CMakeFiles/edit_cache.dir
-C:/Users/Mahdi/source/repos/Sonic-Mania-Decompport/dependencies/RSDKv5/build/CMakeFiles/rebuild_cache.dir
