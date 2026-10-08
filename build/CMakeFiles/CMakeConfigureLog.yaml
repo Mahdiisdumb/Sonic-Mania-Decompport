@@ -2963,7 +2963,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "platforms/WEBASM.cmake:19 (find_package)"
+      - "platforms/WEBASM.cmake:23 (find_package)"
       - "CMakeLists.txt:79 (include)"
     name: "Ogg"
     configs:
@@ -3062,7 +3062,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "platforms/WEBASM.cmake:30 (find_package)"
+      - "platforms/WEBASM.cmake:34 (find_package)"
       - "CMakeLists.txt:79 (include)"
     name: "unofficial-theora"
     configs:
@@ -3161,7 +3161,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "platforms/WEBASM.cmake:37 (find_package)"
+      - "platforms/WEBASM.cmake:41 (find_package)"
       - "CMakeLists.txt:79 (include)"
     name: "Theora"
     configs:
