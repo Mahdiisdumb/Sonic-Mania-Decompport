@@ -2,6 +2,7 @@
 #if RETRO_PLATFORM == RETRO_WEBASM
 #include <emscripten.h>
 #endif
+#include <cstdio>
 
 using namespace RSDK;
 
@@ -27,6 +28,8 @@ RetroEngine RSDK::engine = RetroEngine();
 
 int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
 {
+    printf("[WEBASM] RunRetroEngine entered\n");
+    fflush(stdout);
     ParseArguments(argc, argv);
 
     if (engine.consoleEnabled)
@@ -91,6 +94,8 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
         }
 
         InitEngine();
+        printf("[WEBASM] InitEngine completed\n");
+        fflush(stdout);
 #if RETRO_USE_MOD_LOADER
         // we confirmed the game actually is valid & running, lets start some callbacks
         videoSettings.shaderID = shader;
@@ -113,6 +118,13 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
 while (RenderDevice::isRunning) {
         RenderDevice::ProcessEvents();
 
+        static int debugFrames = 0;
+
+        if (debugFrames++ < 10) {
+            printf("[WEBASM] Main loop running\n");
+            fflush(stdout);
+        }
+
         if (!RenderDevice::isRunning)
             break;
 
@@ -120,9 +132,15 @@ while (RenderDevice::isRunning) {
         emscripten_sleep(0);
 #endif
 
+        if (debugFrames <= 10) {
+            printf("[WEBASM] Checking FPS cap\n");
+            fflush(stdout);
+        }
+
         if (RenderDevice::CheckFPSCap()) {
             RenderDevice::UpdateFPSCap();
 
+            // Keep the rest of your existing frame-processing code here.
             AudioDevice::FrameInit();
 
 #if RETRO_REV02
