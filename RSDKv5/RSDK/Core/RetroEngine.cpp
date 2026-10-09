@@ -138,9 +138,19 @@ while (RenderDevice::isRunning) {
         }
 
         if (RenderDevice::CheckFPSCap()) {
-            RenderDevice::UpdateFPSCap();
+            static int debugRenderFrames = 0;
+            const bool logRender         = debugRenderFrames < 10;
 
-            // Keep the rest of your existing frame-processing code here.
+            if (logRender) {
+                printf("[WEBASM] Frame %d: sceneState=%d initialized=%d "
+                       "hardPause=%d focus=%d windowState=%d\n",
+                       debugRenderFrames, (int)sceneInfo.state, (int)engine.initialized, (int)engine.hardPause, (int)engine.inFocus,
+                       (int)videoSettings.windowState);
+                fflush(stdout);
+            }
+
+            ++debugRenderFrames;
+            RenderDevice::UpdateFPSCap();
             AudioDevice::FrameInit();
 
 #if RETRO_REV02
@@ -335,14 +345,34 @@ while (RenderDevice::isRunning) {
                         // DrawDevString(buffer, currentScreen->center.x, currentScreen->center.y - 48, 1, 0xF0F0F0);
                     }
 
+                    if (logRender) {
+                        printf("[WEBASM] Before CopyFrameBuffer\n");
+                        fflush(stdout);
+                    }
+
                     RenderDevice::CopyFrameBuffer();
+
+                    if (logRender) {
+                        printf("[WEBASM] After CopyFrameBuffer\n");
+                        fflush(stdout);
+                    }
                 }
             }
 
             if ((engine.focusState & 1) || engine.inFocus == 1)
                 RenderDevice::ProcessDimming();
 
+            if (logRender) {
+                printf("[WEBASM] Before FlipScreen\n");
+                fflush(stdout);
+            }
+
             RenderDevice::FlipScreen();
+
+            if (logRender) {
+                printf("[WEBASM] After FlipScreen\n");
+                fflush(stdout);
+            }
         }
     }
 
