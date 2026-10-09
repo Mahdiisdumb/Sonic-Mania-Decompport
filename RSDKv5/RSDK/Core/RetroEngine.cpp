@@ -1,4 +1,7 @@
 #include "RSDK/Core/RetroEngine.hpp"
+#if RETRO_PLATFORM == RETRO_WEBASM
+#include <emscripten.h>
+#endif
 
 using namespace RSDK;
 
@@ -107,11 +110,15 @@ int32 RSDK::RunRetroEngine(int32 argc, char *argv[])
 
     RenderDevice::InitFPSCap();
 
-    while (RenderDevice::isRunning) {
+while (RenderDevice::isRunning) {
         RenderDevice::ProcessEvents();
 
         if (!RenderDevice::isRunning)
             break;
+
+#if RETRO_PLATFORM == RETRO_WEBASM
+        emscripten_sleep(0);
+#endif
 
         if (RenderDevice::CheckFPSCap()) {
             RenderDevice::UpdateFPSCap();
@@ -1355,7 +1362,6 @@ void RSDK::ProcessDebugCommands()
     if (!customSettings.enableControllerDebugging)
         return;
 #endif
-
     if (controller[CONT_P1].keySelect.press) {
 #if RETRO_REV0U
         if (sceneInfo.state == ENGINESTATE_DEVMENU || RSDK::Legacy::gameMode == RSDK::Legacy::ENGINE_DEVMENU)
