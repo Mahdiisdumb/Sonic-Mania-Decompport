@@ -95,7 +95,12 @@ void RenderDevice::CopyFrameBuffer()
             frameBuffer += screens[s].pitch;
             pixels += pitch / sizeof(uint16);
         }
-
+#if RETRO_PLATFORM == RETRO_WEBASM
+        if (s == 0) {
+            uint16_t firstPixel = ((uint16_t *)screens[s].frameBuffer)[0];
+            PrintLog(PRINT_NORMAL, "[WEBASM] First framebuffer pixel: %u", firstPixel);
+        }
+#endif
         SDL_UnlockTexture(screenTexture[s]);
     }
 }
